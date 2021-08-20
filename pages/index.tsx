@@ -5,7 +5,7 @@ import { FormEventHandler } from 'react';
 import styled from 'styled-components';
 import { APP_NAME } from '../libs/utils/constants';
 import { setOptionsToStorage } from '../libs/utils/quiz';
-import { QuizAPIOptions } from './quiz/getQuiz';
+import { QuizAPIOptions } from '../libs/utils/getQuiz';
 
 const Container = styled.div`
 	padding-top: 100px;

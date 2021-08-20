@@ -6,7 +6,9 @@ import styled from 'styled-components';
 
 const MaxContainer = styled.div`
 	margin: 0 auto;
-	width: min(90%, 600px);
+	/* width: min(90%, 600px); */
+	width: 90%;
+	max-width: 600px;
 `;
 
 function MyApp({ Component, pageProps }: AppProps) {
