@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { unescapeHTML } from '../../libs/utils/quiz';
+import { unescapeHTML } from '../../utils/quiz';
 
 const TextWrapper = styled.div`
 	text-align: center;

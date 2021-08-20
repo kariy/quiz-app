@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import Link from 'next/link';
-import { QuizInfo, QuizResult } from '../../libs/types/quizTypes';
+import { QuizInfo, QuizResult } from '../../../libs/types/quizTypes';
 
 const Container = styled.div`
 	h1 {

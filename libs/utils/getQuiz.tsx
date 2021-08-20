@@ -1,6 +1,6 @@
 import axios from 'axios';
-import { QuestionType } from '../../libs/types/quizTypes';
-import { validateQuizAPIOptions } from '../../libs/utils/quiz';
+import { QuestionType } from '../types/quizTypes';
+import { validateQuizAPIOptions } from './quiz';
 
 export interface QuizAPIOptions {
 	category: number;

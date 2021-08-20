@@ -1,5 +1,5 @@
 import { useEffect, useReducer } from 'react';
-import getQuiz from '../../pages/quiz/getQuiz';
+import getQuiz from '../utils/getQuiz';
 import {
 	QuestionType,
 	QuestionAttempt,
@@ -19,11 +19,11 @@ export type Action = {
 		| 'error'
 		| 'loading';
 	payload?: {
-		questions?: QuestionType[];
-		attempt?: any;
-		quesIndex?: number;
-		answer?: string;
-		quizInfo?: QuizInfo;
+		questions?: QuestionType[] | null | undefined;
+		attempt?: any | null | undefined;
+		quesIndex?: number | null | undefined;
+		answer?: string | null | undefined;
+		quizInfo?: QuizInfo | null | undefined;
 	};
 };
 
@@ -74,7 +74,8 @@ const reducer = (state: State, action: Action): State => {
 			return { ...state, isLoading: true };
 		case 'attempt': {
 			const newAttempt = [...(state.currentAttempt as UserAttempt)];
-			newAttempt[payload.quesIndex].selected_answer = payload.answer;
+			const index = payload.quesIndex || 0;
+			newAttempt[index].selected_answer = payload?.answer;
 
 			return {
 				...state,

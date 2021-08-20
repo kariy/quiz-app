@@ -1,4 +1,4 @@
-import { QuizAPIOptions } from '../../pages/quiz/getQuiz';
+import { QuizAPIOptions } from './getQuiz';
 import { QuestionType, QuizResult, UserAttempt } from '../types/quizTypes';
 
 export function evaluateQuiz(quiz: QuestionType[], attempt: UserAttempt) {

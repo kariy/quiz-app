@@ -1,8 +1,8 @@
 import { FormEventHandler, useEffect, useState } from 'react';
 import styled, { keyframes } from 'styled-components';
-import { QuestionType } from '../../libs/types/quizTypes';
+import { QuestionType } from '../../../libs/types/quizTypes';
 import Answers from './Answers';
-import { setRandomizeAnswers, unescapeHTML } from '../../libs/utils/quiz';
+import { setRandomizeAnswers, unescapeHTML } from '../../../libs/utils/quiz';
 
 const move = keyframes`
     from {
