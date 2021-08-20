@@ -73,7 +73,7 @@ const reducer = (state: State, action: Action): State => {
 		case 'loading':
 			return { ...state, isLoading: true };
 		case 'attempt': {
-			const newAttempt = [...state.currentAttempt];
+			const newAttempt = [...(state.currentAttempt as UserAttempt)];
 			newAttempt[payload.quesIndex].selected_answer = payload.answer;
 
 			return {
