@@ -28,16 +28,16 @@ export type Action = {
 };
 
 export type State = {
-	quizInfo: QuizInfo | null;
-	questions: QuestionType[];
-	totalQuestion: number;
-	currentAttempt: UserAttempt;
-	currentQuestionIndex: number;
-	isFinish: boolean;
-	quesToChange: boolean;
-	result: QuizResult | null;
-	isError: boolean;
-	isLoading: boolean;
+	quizInfo: QuizInfo | undefined | null;
+	questions: QuestionType[] | undefined | null;
+	totalQuestion: number | undefined | null;
+	currentAttempt: UserAttempt | undefined | null;
+	currentQuestionIndex: number | undefined | null;
+	isFinish: boolean | undefined | null;
+	quesToChange: boolean | undefined | null;
+	result: QuizResult | undefined | null;
+	isError: boolean | undefined | null;
+	isLoading: boolean | undefined | null;
 };
 
 const initState: State = {
@@ -59,10 +59,10 @@ const reducer = (state: State, action: Action): State => {
 		case 'init':
 			return {
 				...state,
-				questions: payload.questions,
-				totalQuestion: payload.questions.length,
-				currentAttempt: payload.attempt,
-				quizInfo: payload.quizInfo,
+				questions: payload?.questions,
+				totalQuestion: payload?.questions?.length,
+				currentAttempt: payload?.attempt,
+				quizInfo: payload?.quizInfo,
 				isLoading: false,
 			};
 		case 'error':
